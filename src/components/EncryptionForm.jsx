@@ -25,14 +25,14 @@ const EncryptionForm = ({onSuccess}) => {
                 <h2 className=" mb-4 text-2xl font-bold text-center">Enter the Secret Phrases</h2>
                 <input
                 type="text"
-                placeholder="Paga Puiiiii...."
+                placeholder="Paga Puiiiii.... (hint: no leading spaces and no caps)"
                 value={input1}
                 onChange={(e) => setInput1(e.target.value)}
                 className="w-full p-2 mb-2 border rounded"
                 />
                 <input 
                 type="text"
-                placeholder="Saga Suiiiiii...."
+                placeholder="Saga Suiiiiii.... (hint: no leading spaces and no caps)"
                 value={input2}
                 onChange={(e) => setInput2(e.target.value)}
                 className="w-full p-2 mb-2 border rounded"
