@@ -1,0 +1,79 @@
+.gallery {
+    --s: 130px;
+    /* control the size of the images */
+    display: grid;
+    gap: 5px;
+    position: relative;
+
+    /* Add the gradient background */
+    background: linear-gradient(to right, #f472b6, #c084fc);
+    /* Pink to purple */
+    min-height: 100vh;
+    /* Ensure it fills the viewport */
+    place-content: center;
+    /* Center the gallery */
+}
+
+.input {
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    inset: calc(50% - var(--s) / 3);
+    cursor: pointer;
+    --g: linear-gradient(#fff 0 0) no-repeat;
+    background: var(--g) 50%/60% 3px, var(--g) 50%/3px 60%, #222;
+    transition: 1.5s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.image {
+    width: var(--s);
+    aspect-ratio: 1;
+    grid-area: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: scale(0.5);
+    transition: 1s calc((var(--i) - 1) * 0.1s);
+}
+
+.image:nth-of-type(1) {
+    --i: 1;
+}
+
+.image:nth-of-type(2) {
+    --i: 2;
+}
+
+.image:nth-of-type(3) {
+    --i: 3;
+}
+
+.image:nth-of-type(4) {
+    --i: 4;
+}
+
+.image:nth-of-type(5) {
+    --i: 5;
+}
+
+.image:nth-of-type(6) {
+    --i: 6;
+}
+
+.image:nth-of-type(7) {
+    --i: 7;
+}
+
+.image:nth-of-type(8) {
+    --i: 8;
+}
+
+.input:checked~.image {
+    transform: rotate(calc(var(--i) * 360deg / 8)) translate(calc(1.5 * var(--s))) rotate(calc(var(--i) * -360deg / 8));
+}
+
+.input:checked {
+    transform: rotate(135deg);
+}
