@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import EncryptionForm from "./components/EncryptionForm";
 import LandingPage from "./components/LandingPage";
 import Gallery from "./components/Gallery";
